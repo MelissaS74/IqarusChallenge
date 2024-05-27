@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #f4f4f4;
+    background-color: #EE7523;
+    padding: 40px;
+    /* Add background image */
+    background-image: url('https://iqarus.com/wp-content/uploads/2021/12/IQ_LOGO_WATERMARK@300x.png');
+    background-repeat: no-repeat;
+    background-position: 40px center;
+    background-size: cover; 
+    padding-left: 100px; /* Adjust according to image size and desired padding */
+    /* Adjust background size to fit the heading */
+    background-size: 100px;
+    /* Add spacing around the image */
+    margin: 10px;
+    /* Set max-width */
+    max-width: 1125px;
+}
+
+form {
+    max-width: 1125px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #595757;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #EE7523;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#results {
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#results h2 {
+    margin-top: 0;
+}
+
+#results p {
+    margin: 5px 0;
+}

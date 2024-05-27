@@ -1,0 +1,95 @@
+[
+  {
+    "name": "COVID-19 Crisis in Afghanistan",
+    "disaster_type": "Pandemic",
+    "population_affected": 50000,
+    "resources": {
+      "medical_facilities": {
+        "COVID_treatment_facilities": 10,
+        "mobile_laboratories": 5,
+        "non_COVID_medical_clinics": 20
+      },
+      "medical_equipment": {
+        "PPE": 50000,
+        "ventilators": 200,
+        "testing_kits": 10000
+      },
+      "transport": {
+        "ambulances": 50,
+        "helicopters": 5
+      },
+      "staff": {
+        "doctors": 100,
+        "nurses": 200,
+        "lab_technicians": 50,
+        "support_staff": 150
+      },
+      "other_resources": {
+        "fuel": 10000,
+        "vehicles": 30
+      }
+    },
+    "service_providers": {
+      "Iqarus": {
+        "staff_deployed": {
+          "doctors": 20,
+          "nurses": 40,
+          "lab_technicians": 10,
+          "support_staff": 30
+        },
+        "facilities_operated": 3,
+        "equipment_supplied": {
+          "PPE": 10000,
+          "ventilators": 50,
+          "testing_kits": 2500
+        }
+      }
+    }
+  },
+  {
+    "name": "Aeromedical Evacuation Services in Niger",
+    "disaster_type": "Aeromedical Evacuation",
+    "population_affected": 5000,
+    "resources": {
+      "medical_facilities": {
+        "field_hospitals": 2,
+        "mobile_clinics": 3
+      },
+      "medical_equipment": {
+        "PPE": 5000,
+        "ventilators": 50,
+        "testing_kits": 200
+      },
+      "transport": {
+        "medical_evacuation_aircraft": 5,
+        "ground_ambulances": 10
+      },
+      "staff": {
+        "flight_physicians": 10,
+        "nurses": 20,
+        "paramedics": 30,
+        "support_staff": 50
+      },
+      "other_resources": {
+        "fuel": 5000,
+        "vehicles": 20
+      }
+    },
+    "service_providers": {
+      "Iqarus": {
+        "staff_deployed": {
+          "flight_physicians": 5,
+          "nurses": 10,
+          "paramedics": 15,
+          "support_staff": 25
+        },
+        "aircraft_operated": 3,
+        "equipment_supplied": {
+          "PPE": 2500,
+          "ventilators": 25,
+          "testing_kits": 100
+        }
+      }
+    }
+  }
+]

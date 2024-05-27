@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crisis Management System</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<h1>Crisis Resource Advisor</h1>
+<form id="crisis-form">
+    <label for="disaster_type">Type of Disaster:</label>
+    <input type="text" id="disaster_type" name="disaster_type" required>
+
+    <label for="population">Affected Population:</label>
+    <input type="number" id="population" name="population" required>
+
+    <button type="submit">Get Suggestions</button>
+</form>
+<div id="results">
+    <!-- Results will be displayed here -->
+    
+</div>
+
+<script>
+document.getElementById('crisis-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const disasterType = document.getElementById('disaster_type').value;
+    const population = document.getElementById('population').value;
+
+    axios.post('/api/suggestions', {
+        disaster_type: disasterType,
+        population: population
+    }).then(function(response) {
+        const data = response.data;
+        if (data.error) {
+            document.getElementById('results').innerHTML = '<p>' + data.error + '</p>';
+        } else {
+            let html = '<h2>Recommended Resources:</h2>';
+            const categories = ['Staff', 'Equipment', 'Facilities', 'Transport', 'Other Resources'];
+            categories.forEach(category => {
+                if (data.hasOwnProperty(category)) {
+                    html += `<h3>${category}:</h3>`;
+                    const resources = data[category];
+                    for (const resource in resources) {
+                        html += `<p>${resource}: ${resources[resource]}</p>`;
+                    }
+                }
+            });
+            document.getElementById('results').innerHTML = html;
+        }
+    }).catch(function(error) {
+        document.getElementById('results').innerHTML = '<p>No similar cases found or an error occurred.</p>';
+    });
+});
+</script>
+</body>
+</html>
